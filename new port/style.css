@@ -1,0 +1,222 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif; /* Font style change kar sakte hain */
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Variables for easy color changes */
+:root {
+    --primary-color: #2600ff; /* Blue */
+    --secondary-color: #343a40; /* Dark Grey */
+    --background-color: #f8f9fa; /* Light Grey/White */
+    --text-color: #333;
+    --white-color: #fff;
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+section {
+    padding: 80px 10%; /* Har section ki padding */
+}
+
+/* Header/Navbar Styling */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: var(--white-color);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.navbar a {
+    font-size: 18px;
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin-left: 35px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--primary-color);
+}
+
+/* Utility Class for Headings */
+.heading {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: var(--secondary-color);
+}
+
+/* Hero Section (Home) */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 100px; /* Header ke liye space */
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    color: var(--primary-color);
+}
+
+.hero-content h3 {
+    font-size: 32px;
+    margin: 10px 0 20px;
+    color: var(--secondary-color);
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    max-width: 500px;
+}
+
+.hero-image img {
+    max-width: 200px;
+    border-radius: 20%; /* Gol aakar */
+    box-shadow: var(--box-shadow);
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    font-size: 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #101111; /* Darker blue on hover */
+}
+
+/* About Section */
+.about {
+    background: var(--white-color);
+}
+
+.about-content p {
+    font-size: 18px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Skills Section */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.skill-box {
+    background: var(--white-color);
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    width: 250px;
+    transition: transform 0.3s;
+}
+
+.skill-box:hover {
+    transform: translateY(-10px);
+}
+
+.skill-box i {
+    font-size: 50px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.skill-box h3 {
+    font-size: 20px;
+    color: var(--secondary-color);
+}
+
+/* Contact Section */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-info {
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Footer */
+.footer {
+    padding: 20px 10%;
+    text-align: center;
+    background: var(--secondary-color);
+    color: var(--white-color);
+    font-size: 14px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 991px) {
+    .header {
+        padding: 20px 5%;
+    }
+    section {
+        padding: 80px 5%;
+    }
+    .hero {
+        flex-direction: column-reverse; /* Mobile par image upar, text neeche */
+        text-align: center;
+        min-height: auto;
+    }
+    .hero-content {
+        margin-top: 50px;
+    }
+    .hero-image {
+        margin-top: 50px;
+    }
+}
